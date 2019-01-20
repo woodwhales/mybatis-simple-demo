@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.woodwhales.simple.mapper.UserMapper">
+
+  <select id="selectByPrimaryKey" resultType="org.woodwhales.simple.entity.User">
+    select 
+    id, userName, realName, sex, mobile, email, note
+    from t_user
+    where id = ?
+  </select>
+  
+  <select id="selectAll" resultType="org.woodwhales.simple.entity.User">
+    select 
+    id, userName, realName, sex, mobile, email, note
+    from t_user
+  </select>
+  
+</mapper>
