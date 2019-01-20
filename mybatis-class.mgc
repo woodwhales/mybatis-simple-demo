@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="org.woodwhales.simple.mapper.UserMapper" x="420" y="127">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.executor.Executor" x="79" y="238">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.session.SqlSession" x="539" y="342">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.executor.DefaultExecutor" x="17" y="423">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.woodwhales.mybatis.executor.Executor"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.config.Configuration"
+            endpointName="conf" kind="Simple"/>
+        <Communication destinationClassName="org.woodwhales.mybatis.util.ReflectionUtil"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.bind.MappedProxy" x="620" y="451">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.session.SqlSession"
+            endpointName="session" kind="Simple"/>
+        <Communication destinationClassName="org.woodwhales.mybatis.session.SqlSession"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.util.ReflectionUtil" x="697" y="338">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.session.DefaultSqlSession"
+        x="271" y="228">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.woodwhales.mybatis.session.SqlSession"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.config.Configuration"
+            endpointName="configuration" kind="Simple"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.executor.Executor"
+            endpointName="executor" kind="Simple"/>
+        <Communication destinationClassName="org.woodwhales.mybatis.executor.Executor"/>
+    </Class>
+    <Class name="org.woodwhales.simple.entity.User" x="676" y="116">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.session.SqlSessionFactory"
+        x="96" y="574">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.config.Configuration"
+            endpointName="config" kind="Simple"/>
+        <Communication destinationClassName="org.woodwhales.mybatis.config.Configuration"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.config.MappedStatement" x="582" y="562">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.woodwhales.mybatis.config.Configuration" x="372" y="430">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.woodwhales.mybatis.config.MappedStatement"
+            endpointName="mappedStatements" kind="Simple"/>
+    </Class>
+</ClassDiagram>

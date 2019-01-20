@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="org.woodwhales.simple.mapper" x="498" y="438">
+        <DependencyLink destination="org.woodwhales.simple.entity"/>
+    </Package>
+    <Package name="org.woodwhales.simple.entity" x="545" y="369"/>
+    <Package name="org.woodwhales.mybatis.util" x="130" y="117"/>
+    <Package name="org.woodwhales.mybatis.session" x="107" y="330">
+        <DependencyLink destination="org.woodwhales.mybatis.bind"/>
+        <DependencyLink destination="org.woodwhales.mybatis.executor"/>
+        <DependencyLink destination="org.woodwhales.mybatis.config"/>
+    </Package>
+    <Package name="org.woodwhales.mybatis.executor" x="119" y="213">
+        <DependencyLink destination="org.woodwhales.mybatis.util"/>
+        <DependencyLink destination="org.woodwhales.mybatis.config"/>
+    </Package>
+    <Package name="org.woodwhales.mybatis.config" x="299" y="271"/>
+    <Package name="org.woodwhales.mybatis.bind" x="91" y="436">
+        <DependencyLink destination="org.woodwhales.mybatis.session"/>
+    </Package>
+</PackageAnalysis>
